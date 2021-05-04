@@ -1,0 +1,16 @@
+<div class="app-modal">
+    <div class="app-modal-body">
+        <div class="app-modal-title">
+            {{photographer}}
+        </div>
+        <div (click)="closeModal('gallery-image-modal');" class="app-modal-close-container">
+            <div class="app-modal-leftright"></div>
+            <div class="app-modal-rightleft"></div>
+            <label class="app-modal-close">close</label>
+        </div>
+
+        <img [src]="image">
+        <ng-content></ng-content>
+    </div>
+</div>
+<div class="app-modal-background"></div>

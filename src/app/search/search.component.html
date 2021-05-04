@@ -1,0 +1,8 @@
+<section>
+  <form novalidate [formGroup]="searchForm"  class="search">
+    <input type="text" placeholder="What are you looking for?" class="form-control" formControlName="query" #query (keydown.enter)="$event.preventDefault()">
+    <button type="submit" class="searchButton" (click)="search(query.value)">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+  </form>
+</section>

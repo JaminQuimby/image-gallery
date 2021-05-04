@@ -1,0 +1,11 @@
+<div
+  class="gallery-list"
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollEnd()"
+>
+  <app-gallery *ngFor="let image of images" [gallery]="image"></app-gallery>
+</div>
+
+<app-modal signature="gallery-image-modal"></app-modal>
